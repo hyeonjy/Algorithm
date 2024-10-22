@@ -1,6 +1,4 @@
 function solution(x) {
-  var n = (x + "")
-    .split("")
-    .reduce((acc, cur) => parseInt(acc) + parseInt(cur));
-  return x % n === 0;
+  var sum = (x + "").split("").reduce((acc, cur) => +acc + +cur);
+  return x % sum === 0;
 }
