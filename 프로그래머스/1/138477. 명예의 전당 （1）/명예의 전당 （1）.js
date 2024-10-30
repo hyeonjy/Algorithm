@@ -1,9 +1,10 @@
 function solution(k, score) {
-    let winners = [];
+    let process = [];
     return score.map((s,idx)=>{
-        winners.push(s);
-        winners.sort((a,b) => b-a);
-        if(idx < k) return winners[winners.length-1];
-        else return winners[k-1];
+        process.push(s);
+        process.sort((a,b) => b-a);
+        
+        if(idx < k) return process[process.length-1];
+        else return process[k-1];
     })
 }
