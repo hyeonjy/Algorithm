@@ -9,13 +9,10 @@ function countDivisors(number) {
 }
 
 function solution(number, limit, power) {
-    
-    let divisors = [];
     let totalSum = 0;
     for(let i=1;i<=number;i++){
         let result = countDivisors(i) <= limit ? countDivisors(i) : power;
         totalSum += result;
-        divisors.push(result);
     }
 
     return totalSum;
