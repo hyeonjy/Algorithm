@@ -9,13 +9,13 @@ let input = [];
 rl.on('line', function (line) {
     input = [line];
 }).on('close',function(){
-    str = input[0];
-    for(let i=0;i<str.length;i++){
-        if(str[i] === str[i].toUpperCase()){
-            process.stdout.write(str[i].toLowerCase());
+    str = input[0].split("")
+    str.forEach((value, index) => {
+        if (value === value.toUpperCase()) {
+            str[index] = value.toLowerCase();
+        } else {
+            str[index] = value.toUpperCase();
         }
-        else{
-            process.stdout.write(str[i].toUpperCase());
-        }
-    }
+    });
+    console.log(str.join(""));
 });
