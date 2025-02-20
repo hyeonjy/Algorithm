@@ -1,4 +1,4 @@
 function solution(a, b) {
-    const result = Math.max(Number(String(a)+String(b)), Number(String(b)+String(a)))
+    const result = Math.max(Number(`${a}${b}`), Number(`${b}${a}`))
     return result;
 }
