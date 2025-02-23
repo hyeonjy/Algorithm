@@ -1,9 +1,9 @@
 function solution(a, d, included) {
   let result = 0;
 
-  for (let i = 0, j = a; i < included.length; i++, j += d) {
+  for (let i = 0; i < included.length; i++) {
     if (included[i]) {
-      result += j;
+      result += a + (i*d);
     }
   }
 
