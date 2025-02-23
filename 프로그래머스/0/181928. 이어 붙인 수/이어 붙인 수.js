@@ -4,12 +4,12 @@ function solution(num_list) {
     
     for(let i=0;i<num_list.length;i++){
         if(num_list[i] % 2 === 0){
-            evenStr += num_list[i]
+            evenStr += num_list[i];
         }
         else{
-            oddStr += num_list[i]
+            oddStr += num_list[i];
         }
     }
     
-    return Number(evenStr) + Number(oddStr);
+    return +evenStr + +oddStr;
 }
