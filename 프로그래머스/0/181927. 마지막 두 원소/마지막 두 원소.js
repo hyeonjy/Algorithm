@@ -1,6 +1,5 @@
 function solution(num_list) {
-    let length = num_list.length-1;
-    let minus = num_list[length]-num_list[length-1];
-    num_list.push(minus > 0 ? minus : num_list[length]*2);
+    const [a,b] = num_list.slice(-2);
+    num_list.push(b > a ? b-a : b*2);
     return num_list;
 }
